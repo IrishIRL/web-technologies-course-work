@@ -1,0 +1,123 @@
+.forecastGrid {
+	display: grid;
+
+	grid-template-columns: 2fr 8fr;
+	/*grid-template-rows: repeat(10, 60px); - Breaks the visuals */
+    
+	width: 70%;
+	margin: auto;
+}
+
+.forecastGrid > div {
+	background-color: #a4ebf3;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+/* CURRENT WEATHER */
+
+#currentWeather {
+    grid-row: 1 / 6 span;
+    grid-column: 1 / 2;
+	
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+    
+    text-align: center;
+}
+
+#currentWeatherImage {
+	grid-row: 1 / 4;
+}
+
+#currentWeatherImage > img {
+	width: 100%;
+	height: 100%;
+}
+
+#currentWeatherTemp {
+	grid-row: 4 / 5;
+	font-size: 36px;
+}
+
+#currentWeatherOther {
+	grid-row: 5 / 7;
+}
+
+/* SUN MOVE */
+
+#sunMove {
+    grid-row: 7 / 3 span;
+    grid-column: 1 / 2;
+	
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+    
+    text-align: center;
+}
+
+#sunrisePic {
+	grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
+
+#sunriseTime {
+	grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+#sunsetPic {
+	grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+
+#sunsetTime {
+	grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+/* DAY WEATHER */
+
+#dayWeather {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    
+    text-align: center;
+}
+
+#dayWeather table {
+    text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+/* WEEK WEATHER */
+
+#weekWeather {
+	grid-row: 3 / 7 span;
+    grid-column: 2 / 3;
+	
+	display: flex;
+	flex-direction: column;
+    
+    text-align: center;
+	padding: 25px;
+}
+
+.weekWeatherDay {
+	flex-grow: 1;
+	display: flex;
+
+	padding-top: 2%;
+	padding-left: 5px;
+/*	border: 1px solid #A4EBF3; */
+}
+
+.weekWeatherDay:hover {
+/*	border: 1px solid white; */
+}
+
+.weekWeatherTemp {
+	margin: 0 5px 0 5px;
+}

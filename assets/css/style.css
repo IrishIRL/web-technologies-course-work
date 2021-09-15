@@ -1,0 +1,212 @@
+@charset "utf-8";
+body {
+	margin:-25px 0px 0px 0px;
+	background-color:#A4EBF3;
+	color:#000000; 
+	text-align:left;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', monospace; /* Note: Find a better looking font */
+	font-size:1em;
+}
+
+a{color:#000000;} /* Note: Decide whether switch to buttons */
+
+/* Added for the "READ MORE... on news page, could be edited/ deleted "*/
+a:link{
+	text-decoration: none;
+}
+
+/* General page structure for every page */
+#page {
+	padding: 10px;
+	background:#FFFFFF;
+	text-align:left;
+	border:1px solid #000000;
+}
+
+#header {
+	height:200px;
+	background-image:url("../img/banner.jpg");
+	position: relative;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	padding: 20px;
+	background-size: 100%;
+}
+
+#nav {
+	margin:0 0 0 0;
+	padding:10px 10px 10px 10px;
+	background:#AAAAAA;
+	border: 2px solid #000000;
+}
+	
+#nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#nav li {
+	margin:0;
+	padding:.25em;
+	display:inline;
+}
+
+#nav ul li:hover {
+	background-color: #A4EBF3;
+	text-decoration: underline;
+}
+
+#footer {
+	position:relative;
+	bottom:0;
+	margin:0 0 0 0;
+	padding:0;
+	height:4em;
+	line-height:4em;
+	text-align:center;
+	font-size:.7em;
+	background:#AAAAAA;
+	border-top:2px solid #000000;
+}
+
+/* PS. Colors that work perfectly together: a4ebf3 A2C2F2 A2F2D2 F2AAA2*/
+/* CSS code used in login page / news / about us pages */
+
+/* Making several elements to show inline */
+.inline {
+	display:inline-block;
+	margin:15px;
+	vertical-align: top;
+}
+
+/*Additional to inline attribute for longer elements (for ex. long texts) */
+.half {
+	height: 100%;
+	width: 50%;
+}
+
+.quater {
+	height:100%;
+	width:21%;
+}
+
+/* Making centered work perfectly on both mobiles and PC */
+@media screen and (min-width: 1366px) {
+  .centered {
+	  text-align: center;
+	  margin: auto;
+	  width: 100%;
+	/*  padding: 10px; */
+  }
+  .weather_img {
+	  width: 350px;
+	  height: 350px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+	/* HR element is used only in About Us page, removed for phones, because it does not look good on them */
+	hr {
+		display:none;
+	}
+  .centered {
+	  text-align: center;
+	  width: 100%;
+  }
+  .weather_img {
+	  width: 100px;
+	  height: 100px;
+  }
+}
+
+/* Beautiful button */
+.button {
+	color: white;
+	background-color: #a4ebf3;
+	font-size: 16px;
+	border: none;
+	padding: 6px 62px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition:0.5s;
+}
+
+/* Beautiful button on hover */
+.button:hover {
+	background-color: #A2C2F2;
+	padding: 9px 70px;
+}
+
+/* Beautiful input */
+.input_rounded {
+	padding: 5px 20px;
+	border-radius: 5px;
+	border: solid black 1px;
+}
+
+/* Beautiful select */
+.select_rounded {
+	padding: 5px 20px;
+	border-radius: 5px;
+	border: solid black 1px;
+}
+
+/* Division to blocks on news page */
+.news_block {
+	border-radius:10px;
+	background-color:#a4ebf3;
+	overflow-x: hidden; /* Makes text fit box */
+	padding: 15px;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100% !important;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  margin-right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/*Index page current weather table adjustments*/
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}
